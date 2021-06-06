@@ -1,5 +1,6 @@
 from random import seed
 from random import randint
+import pandas as pd
 
 class Random_generator:
 
@@ -11,7 +12,10 @@ class Random_generator:
             value = randint(0, 10)
             value_list.append(value)
             counter += 1
+        df = pd.DataFrame(value_list, columns=['Random'])
+
         print(value_list)
+        print(df)
 
 def main():
     app = Random_generator()
